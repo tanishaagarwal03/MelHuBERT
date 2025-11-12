@@ -8,7 +8,7 @@ pytz>=2024.1
 PyYAML>=6.0.2
 six>=1.16.0
 tensorboardX>=2.6.2.2
-torch==2.8.0a0+gitunknown
+torch
 torchaudio==2.3.0
 tqdm>=4.66.5
 typing_extensions>=4.12.2
