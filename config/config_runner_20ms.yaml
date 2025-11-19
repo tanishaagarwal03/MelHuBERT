@@ -19,5 +19,6 @@ datarc:
   train_batch_size: 4
   max_timestep: -320 # Max length for audio feature (0 for no restriction, negative value to set minimum timestep)
   sequence_length: 750 # Randomly sampled lenght for audio feature before forwarding 
-  sets: ['/home/nervjack2/libri-with-cluster/csv/libri-360-np-stage1.csv'] # You can assign multiple data .csv file for pre-training
+  # sets: ['/home/nervjack2/libri-with-cluster/csv/libri-360-np-stage1.csv'] # You can assign multiple data .csv file for pre-training
+  sets: ['/disk/scratch/s2211921/melhubert/librispeech/processed/libri-360-data-cluster-pair.csv']
     
