@@ -20,4 +20,5 @@ datarc:
   max_timestep: -320 # Max length for audio feature (0 for no restriction, negative value to set minimum timestep)
   sequence_length: 1500 # Randomly sampled lenght for audio feature before forwarding 
   sets: ['/work/nervjack1027/dataset_home/libri-960-stage-2-10ms-test.csv'] # You can assign multiple data .csv file for pre-training
+  sets: ['/disk/scratch/s2211921/melhubert/librispeech/libri-360/train-clean-360-k512-e10.bas']
     
