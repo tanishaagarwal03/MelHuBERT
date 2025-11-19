@@ -1,0 +1,21 @@
+runner:
+  n_epochs: 1          # only 1 epoch
+  total_steps: 20      # stop after 20 steps, even if epoch not finished
+  gradient_clipping: 10.0
+  gradient_accumulate_steps: 8
+
+  log_step: 1          # log every step so you can see quickly
+  save_every_x_epochs: 1
+
+optimizer:
+  lr: 1.e-4
+  betas: [0.9, 0.999]
+  eps: 1.e-8
+  weight_decay: 0
+
+datarc:
+  num_workers: 4       # can lower this if needed
+  train_batch_size: 2  # small batch to make test run light
+  max_timestep: -320
+  sequence_length: 750
+  sets: ['/disk/scratch/s2211921/melhubert/librispeech/processed/libri-360-data-cluster-pair.csv']
