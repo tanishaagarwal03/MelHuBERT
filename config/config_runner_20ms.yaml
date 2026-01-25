@@ -1,12 +1,12 @@
 runner:
-  n_epochs: 200
+  n_epochs: 40
   total_steps: -1
   gradient_clipping: 10.0
   gradient_accumulate_steps: 8
 
   log_step: 1000
   # Save checkpoint for every x epochs (Must specify)
-  save_every_x_epochs: 50
+  save_every_x_epochs: 10
 
 optimizer:
   lr: 1.e-4
