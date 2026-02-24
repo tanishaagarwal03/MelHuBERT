@@ -15,6 +15,37 @@ import torch
 import numpy as np
 from runner import Runner
 
+print("CUDA available:", torch.cuda.is_available())
+print("CUDA device count:", torch.cuda.device_count())
+
+"""
+SCRATCH=/disk/scratch/s2211921
+LIBRI=$SCRATCH/librispeech
+PROC=$LIBRI/melhubert/processed
+CSV=$PROC/libri-360-data-cluster-pair.csv
+
+mkdir -p "$LIBRI"
+mkdir -p "$PROC"
+
+if [ ! -f "$CSV" ]; then
+    echo "[INFO] CSV not found — staging and preprocessing LibriSpeech"
+
+    # copy tar only if needed
+    if [ ! -f "$LIBRI/libri-360.tar" ]; then
+        cp "$HOME/libri-360.tar" "$LIBRI/"
+    fi
+
+    # extract only if needed
+    if [ ! -d "$LIBRI/libri-360" ]; then
+        tar -xf "$LIBRI/libri-360.tar" -C "$LIBRI/"
+    fi
+
+    # preprocess
+    bash preprocess.sh "$LIBRI/libri-360" "$PROC"
+else
+    echo "[INFO] Preprocessed CSV already exists — skipping data prep"
+fi
+"""
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', '--runner_config', help='The yaml file for configuring the whole experiment, except the upstream model')

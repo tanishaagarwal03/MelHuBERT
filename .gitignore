@@ -1,4 +1,19 @@
-result/
-**/__pycache__/
-**/*.ckpt
-**/*.npy
+# env
+venvmel/
+.venv/
+__pycache__/
+*.pyc
+
+# outputs / checkpoints / logs
+experiments/
+*.ckpt
+events.out.tfevents.*
+*.png
+*.csv
+*.out
+
+# scratch / data
+/disk/
+*.tar
+*.flac
+*.npy

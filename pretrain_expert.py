@@ -56,7 +56,8 @@ class MelHuBERTPretrainer(nn.Module):
         if not name:
             name = f'checkpoint-epoch-{num_epoch}.ckpt'
         save_path = os.path.join(self.args.expdir, name)
-        tqdm.write(f'[MelHuBERT] - Save the checkpoint to: {save_path}')
+        print(f'[MelHuBERT] - Save the checkpoint to: {save_path}', flush=True)
+        #  tqdm.write(f'[MelHuBERT] - Save the checkpoint to: {save_path}')
         torch.save(all_states, save_path)
 
     def forward(self, data, global_step=0, log_step=1000):
